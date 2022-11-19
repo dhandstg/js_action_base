@@ -1,0 +1,16 @@
+on: [push]
+
+jobs:
+  run_js_basic_action:
+    runs-on: ubuntu-latest
+    name: Run the basic js action and some more stuff
+    steps:
+      - uses: actions/checkout@v3
+      - name: Run basic js action
+        id: basic_step
+        uses: ./.github/actions/js_action_base
+        with:
+          name_user: 'My name...'
+      - name: Use output from past action
+        run: echo "Time output ${{ steps.basic_step.outputs.time }}"
+
