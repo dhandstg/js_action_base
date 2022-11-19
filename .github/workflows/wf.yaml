@@ -8,7 +8,7 @@ jobs:
       - uses: actions/checkout@v3
       - name: Run basic js action
         id: basic_step
-        uses: ./.github/actions/js_action_base
+        uses: ./js_action_base
         with:
           name_user: 'My name...'
       - name: Use output from past action
