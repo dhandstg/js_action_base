@@ -1,5 +1,5 @@
 const core = require('@actions/core');
-const github = requrie('@actions/github');
+const github = require('@actions/github');
 
 try {
     const triggerer_name = core.getInput('name_user');
