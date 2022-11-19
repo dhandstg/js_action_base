@@ -1,0 +1,13 @@
+name: 'Base action'
+description: 'Display time and read a variable'
+inputs:
+  name_user:
+    description: 'Name of the user triggering the action'
+    required: true
+    default: 'Unknown'
+outputs:
+  time:
+    description: 'The time octocat greeted the user'
+runs:
+  using: 'node16'
+  main: 'index.js'
